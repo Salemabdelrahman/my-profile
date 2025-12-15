@@ -1,0 +1,39 @@
+.about {
+  background-color: var(--bg);
+  color: var(--text);
+
+  .card {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+
+    .text-land:nth-child(2) {
+      border-left: 4px solid var(--border);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      padding-left: 1rem;
+    }
+
+    .text-land span {
+      color: var(--title) !important;
+      -webkit-text-fill-color: initial;
+      font-weight: 600;
+
+    }
+
+    .more-link {
+      color: var(--more);
+      font-weight: bold;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      margin-top: 1.5rem;
+
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+  }
+}

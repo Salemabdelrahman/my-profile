@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+
+
+  .navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .navbar-nav {
+
+    .nav-link {
+      color: var(--text);
+      margin-right: 1rem;
+      font-weight: 500;
+      border-radius: 6px;
+
+      &:hover {
+        background-color: var(--card-bg);
+        color: var(--title);
+      }
+
+      &.active {
+        color: white;
+        background-color: var(--button);
+        font-weight: 700;
+      }
+    }
+
+    .active {
+      color: white;
+      background-color: var(--button);
+      font-weight: 700;
+    }
+  }
+
+}

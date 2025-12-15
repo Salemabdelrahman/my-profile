@@ -1,0 +1,56 @@
+// Dark Theme
+.dark-theme {
+  --bg: #111827;
+  --card-bg: #1f2937;
+  --title: #c084fc;
+  --border: #7e22ce;
+  --button: #9333ea;
+  --more: #f9a8d4;
+  --secondary-button: #ec4899;
+  --text: #fff;
+}
+
+// Light Theme
+.light-theme {
+  --bg: #f9fafb;
+  --card-bg: #ffffff;
+  --title: #9333ea;
+  --border: #e9d5ff;
+  --button: #9333ea;
+  --more: #ec4899;
+  --secondary-button: #ec4899;
+  --text: #374151;
+}
+
+// Colors Classes with Theme Dark and Light Support
+.bg {
+  background-color: var(--bg) !important;
+}
+
+.card-bg {
+  background-color: var(--card-bg) !important;
+}
+
+.text {
+  color: var(--text) !important;
+}
+
+.title {
+  color: var(--title) !important;
+}
+
+.border {
+  border-color: var(--border) !important;
+}
+
+.button {
+  background-color: var(--button) !important;
+}
+
+.more {
+  color: var(--more) !important;
+}
+
+.secondary-button {
+  background-color: var(--secondary-button) !important;
+}

@@ -1,0 +1,42 @@
+.skills {
+
+
+  .skill-card {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    transform: translate(0px, 0px) rotate(0deg) skew(0deg) skewY(1deg) scaleX(1) scaleY(1);
+    border-top: 4px solid var(--title) !important;
+    padding: 1.5rem;
+
+    .head {
+
+      i {
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+        color: var(--title);
+      }
+
+      h3 {
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: var(--text);
+      }
+    }
+
+    ul {
+      list-style: disc;
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        color: var(--text);
+        padding-left: .75rem;
+
+        &::marker {
+          color: var(--secondary-button);
+        }
+      }
+    }
+  }
+}
