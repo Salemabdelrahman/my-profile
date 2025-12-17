@@ -9,5 +9,12 @@
   <app-contact></app-contact>
 </main>
 <footer class="footer">
-  <p>&copy; 2025 Homayra Binte Harun Heme. All rights reserved.</p>
+  <p>&copy; 2025 Abdelrhman Salem. All rights reserved.</p>
 </footer>
+
+<!-- Up Button -->
+<a id="upButton" href="#" *ngIf="isShow" (click)="scrollToTop(); $event.preventDefault()"
+  class="up-button d-flex align-items-center justify-content-center shadow-primary transition-all animate-on-mount"
+  aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</a>

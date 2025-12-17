@@ -1,56 +1,90 @@
 .contact {
-  h2 {
-    color: var(--primary);
-    margin-bottom: 1rem;
+  background-color: var(--bg);
+
+
+
+
+  .contact-info {
+    padding: 2rem;
+    border-radius: 1rem;
+    height: 80vh;
+
+    .contact-details i {
+      color: var(--button);
+      margin-right: 0.5rem;
+      font-size: larger;
+    }
+
+    .socials-links {
+      .socials a {
+        color: var(--title);
+        transition-duration: 0.3s;
+        border: 2px solid var(--title);
+        border-radius: 50%;
+        font-size: 1.5rem;
+        transition-duration: 0.3s;
+      }
+
+      .socials a:hover {
+        background-color: var(--button);
+        color: var(--text);
+      }
+    }
   }
 
-  .contact-content {
+  .contact-form {
+    flex: 1 1 320px;
+    min-width: 320px;
     display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.8rem;
+    height: 80vh;
 
-    .contact-info {
-      flex: 1 1 220px;
-      min-width: 220px;
+    input,
+    textarea {
+      border-radius: 6px;
+      padding: 0.7rem;
+      font-size: 1rem;
 
-      .socials a {
-        margin-right: 1rem;
-        color: var(--accent);
-        font-size: 1.5rem;
+      &:focus {
+        outline: none;
+        border: 2px solid var(--button);
+        box-shadow: 0 0 5px var(--button);
+      }
+
+      &::placeholder {
+        color: #9ca3af;
       }
     }
 
+    textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .btn {
+      // background: var(--primary);
+      // color: #fff;
+      border-radius: 8px;
+      padding: 0.5rem 1.5rem;
+      text-decoration: none;
+      display: inline-block;
+      align-self: flex-end;
+    }
+  }
+}
+
+
+// Responsive Styles
+@media (max-width: 992px) {
+  .contact {
+    flex-direction: column;
+    height: auto;
+
+    .contact-info,
     .contact-form {
-      flex: 1 1 320px;
-      min-width: 320px;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-
-      input,
-      textarea {
-        background: var(--card-bg);
-        color: var(--text);
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        padding: 0.7rem;
-        font-size: 1rem;
-      }
-
-      textarea {
-        min-height: 80px;
-        resize: vertical;
-      }
-
-      .btn {
-        background: var(--primary);
-        color: #fff;
-        border-radius: 8px;
-        padding: 0.5rem 1.5rem;
-        text-decoration: none;
-        display: inline-block;
-        align-self: flex-end;
-      }
+      height: auto;
+      margin-bottom: 2rem;
     }
   }
 }

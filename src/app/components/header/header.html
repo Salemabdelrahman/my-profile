@@ -7,23 +7,16 @@
     </button>
     <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" routerLinkActive="active shadow-primary" routerLink="/home">Home</a>
+        <li class="nav-item"><a class="nav-link" href="#home" (click)="scrollTo('home',$event)">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about" (click)="scrollTo('about',$event)">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills" (click)="scrollTo('skills',$event)">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education" (click)="scrollTo('education',$event)">Education</a>
         </li>
-        <li class="nav-item"><a class="nav-link" routerLinkActive="active shadow-primary" routerLink="/about">About</a>
+        <li class="nav-item"><a class="nav-link" href="#experience"
+            (click)="scrollTo('experience',$event)">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects" (click)="scrollTo('projects',$event)">Projects</a>
         </li>
-        <li class="nav-item"><a class="nav-link" routerLinkActive="active shadow-primary"
-            routerLink="/skills">Skills</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" routerLinkActive="active shadow-primary"
-            routerLink="/education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" routerLinkActive="active shadow-primary"
-            routerLink="/experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" routerLinkActive="active shadow-primary"
-            routerLink="/projects">Projects</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" routerLinkActive="active shadow-primary"
-            routerLink="/contact">Contact</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="#contact" (click)="scrollTo('contact',$event)">Contact</a></li>
       </ul>
 
     </div>
