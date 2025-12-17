@@ -1,17 +1,61 @@
-<section class="card projects" data-aos="fade-up">
+<section id="projects" class="projects py-section" data-aos="fade-up">
   <div class="container">
-    <h2>Featured Projects</h2>
+    <h2 class="card-title transition-all animate-on-mount">Featured Projects</h2>
     <div class="row">
       <div class="col-sm-6 col-lg-4 mb-4" *ngFor="let project of projects">
-        <div class="card h-100 project-card">
+
+        <div class="card card-style h-100 project-card transition-all animate-on-mount">
           <img class="card-img-top img-fluid" [src]="project.image" [alt]="project.title" />
           <div class="card-body">
-            <h3 class="card-title">{{ project.title }}</h3>
-            <p class="card-text">{{ project.description }}</p>
-            <a class="btn" [href]="project.link" target="_blank">View More</a>
+            <h3 class="title-project">{{ project.title }}</h3>
+            <p class="text-land mb-2 ellipsis-2">{{ project.description }}</p>
+            <button type="button" class="btn button-primary shadow-primary w-100 transition-all text-white mb-2"
+              (click)="openModal(project)" data-bs-toggle="modal" data-bs-target="#modalId">View More</button>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap Modal For View More Details Projects -->
+
+  <div class="modal fade" id="modalId" #projectModal tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog p-0 modal-dialog-scrollable modal-dialog-centered  transition-all animate-on-mount"
+      role="document">
+      <div class="modal-content ">
+        <!-- Modal Header -->
+        <div class="modal-header p-0">
+          <h5 class="modal-title p-0 " id="modalTitleId">
+            <img *ngIf="selectedProject?.image" [src]="selectedProject.image" alt="" class="image-modal img-fluid me-2">
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h3 class="my-3 card-title border-0 ">{{ selectedProject?.title }}</h3>
+          <!-- add Technologies -->
+          <div class="technologies">
+            <h3 class="mb-4 title-project">Technologies Used: <span class="text-land">({{
+                selectedProject?.technologys.length }})</span></h3>
+            <span class="badge p-2  me-2 mb-2" *ngFor="let tech of selectedProject?.technologys">{{ tech
+              }}</span>
+          </div>
+          <!-- add description -->
+          <p class="mb-2 text-land">{{ selectedProject?.description }}</p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a *ngIf="selectedProject?.link" class="btn btn-outline-primary  shadow-primary w-100 button-primary"
+            [href]="selectedProject.link" target="_blank">Open Project</a>
+
         </div>
       </div>
     </div>
   </div>
+
+
 </section>

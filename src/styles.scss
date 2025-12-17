@@ -6,3 +6,25 @@
 @use "bootstrap/scss/bootstrap";
 @use "styles/variables.scss";
 @use "styles/themes.scss";
+
+/* Fix: ensure Bootstrap modal is stacked above its backdrop in all cases */
+/* Backdrop is appended to body; using global styles avoids view-encapsulation issues */
+.modal {
+  z-index: 11000 !important;
+  /* ensure modal is above any backdrop */
+}
+
+.modal-backdrop {
+  z-index: 10990 !important;
+  /* keep backdrop below modal */
+}
+
+/* Smooth scrolling and section offset for fixed header */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  /* adjust according to your header height */
+  scroll-margin-top: 80px;
+}

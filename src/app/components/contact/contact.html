@@ -1,33 +1,77 @@
-<section class="card contact" data-aos="fade-up" id="contact">
+<section class="contact py-section" data-aos="fade-up" id="contact">
   <div class="container">
-    <h2>Contact Information</h2>
+
+    <h2 class="card-title transition-all animate-on-mount">Get In Touch</h2>
+
     <div class="row">
-      <div class="col-lg-5 mb-3 contact-info">
-        <p>Homayra Binte Harun Heme<br>I am available for freelance or full-time positions. Contact me via email or
-          social media.</p>
-        <p><i class="fas fa-envelope"></i> heme.dev@email.com</p>
-        <div class="socials">
-          <a class="me-2" href="#"><i class="fab fa-github"></i></a>
-          <a class="me-2" href="#"><i class="fab fa-linkedin"></i></a>
-          <a class="me-2" href="#"><i class="fab fa-facebook"></i></a>
+      <div class="col-lg-5 mb-3 ">
+        <div class="contact-info card-style p-4 transition-all animate-on-mount">
+          <h3 class="card-title-small mb-3">Contact Information</h3>
+
+          <p class="mb-4 text-land ">
+            Have a project in mind or just want to say hello? Feel free to reach out to me! I'm always open to new
+            opportunities and collaborations.
+          </p>
+
+          <div class="contact-details mt-4">
+            <p><i class="fas fa-envelope "></i> abdelrhmansalemcs@gmail.com</p>
+            <p><i class="fas fa-phone "></i> +20 1061438109</p>
+          </div>
+          <!-- Social Media Links -->
+          <div class="socials-links mt-4">
+            <h3 class="text-white fw-bold">Connect with me:</h3>
+            <div
+              class="socials gap-3 transition-all animate-on-mount my-3 d-flex align-items-center justify-content-start  ">
+              <!-- Github -->
+              <a class="animate-on-mount transition-all  p-2 " target="_blank"
+                href="https://github.com/Salemabdelrahman"><i class="fab fa-github"></i></a>
+              <!-- Linkedin -->
+              <a class="animate-on-mount transition-all  p-2 " target="_blank"
+                href="https://www.linkedin.com/in/abdelrhman-salem-6a3714365/"><i class="fab fa-linkedin"></i></a>
+              <!-- Facebook -->
+              <a class="animate-on-mount transition-all  p-2 " target="_blank"
+                href="https://www.facebook.com/abd.el.rahman.salem.592939"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Contact Form -->
       <div class="col-lg-7">
-        <form (ngSubmit)="sendMessage()" #contactForm="ngForm" class="contact-form">
-          <div class="mb-3">
-            <input class="form-control" type="text" name="name" placeholder="Your Name" required ngModel>
-          </div>
-          <div class="mb-3">
-            <input class="form-control" type="email" name="email" placeholder="Your Email" required ngModel>
-          </div>
-          <div class="mb-3">
-            <input class="form-control" type="text" name="subject" placeholder="Subject" ngModel>
-          </div>
-          <div class="mb-3">
-            <textarea class="form-control" name="message" placeholder="Message" required ngModel></textarea>
-          </div>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
+        <div class="contact-form card-style p-4 transition-all animate-on-mount">
+          <h3 class="card-title-small mb-3">Contact Information</h3>
+
+          <form (ngSubmit)="sendMessage()" #contactForm="ngForm" class="contact-form">
+            <div class="mb-3">
+              <!-- Name -->
+              <label for="name">Your Name *</label>
+              <input class="form-control card-style mt-2 " type="text" name="name" placeholder="Your Name" required
+                ngModel>
+            </div>
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email">Your Email *</label>
+              <input class="form-control card-style mt-2 " type="email" name="email" placeholder="Your Email" required
+                ngModel>
+            </div>
+            <!-- Subject * -->
+            <div class="mb-3">
+              <label for="subject">Subject *</label>
+              <input class="form-control card-style mt-2 " type="text" name="subject" placeholder="Subject" required
+                ngModel>
+            </div>
+            <!-- Message * -->
+            <div class="mb-3">
+              <label for="message">Message *</label>
+              <textarea class="form-control card-style mt-2 " name="message" placeholder="Message" required
+                ngModel></textarea>
+            </div>
+
+            <button type="submit" class="btn button-primary shadow-primary w-100">Send Message</button>
+
+
+          </form>
+        </div>
       </div>
     </div>
   </div>
